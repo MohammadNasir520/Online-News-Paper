@@ -63,7 +63,7 @@ const displayNews = (allNews) => {
                     <p><i class="fa-solid fa-eye"></i> ${news.total_view}</p>
                 </div>
                 <div>
-                    <button  class="btn btn-primary">show details</button>
+                    <button  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >show details</button>
                 </div>
             </div>
               
