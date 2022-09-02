@@ -49,19 +49,25 @@ const displayNews = (allNews) => {
 
 
             <div class="d-flex justify-content-between ">
-                <div class="d-flex">
-                    <img  src="" alt="">
-                    <h5>${news.author.name}</h5>
+                <div class="d-flex align-items-center">
+                    <img style="height: 45px; width: 45px; border-radius: 50%; "
+                        src="${news.author.img}" alt="">
+                    <div class="ms-1">
+                        <h5>${news.author.name}</h5>
+                        <p>${news.author.published_date}</p>
+                    </div>
+
                 </div>
                 <div>
-                    <h5>${news.total_view
-            }</h5>
+
+                    <p><i class="fa-solid fa-eye"></i> ${news.total_view}</p>
                 </div>
                 <div>
-                    <button class="btn btn-primary">show details</button>
+                    <button  class="btn btn-primary">show details</button>
                 </div>
             </div>
               
+
             </div>
          </div>
          </div>
@@ -72,4 +78,4 @@ const displayNews = (allNews) => {
         console.log(news)
     })
 }
-newsLoad(5)
+newsLoad(5);
