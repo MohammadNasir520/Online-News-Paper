@@ -14,7 +14,7 @@ const displayCatagories = (catagories) => {
             }</p>
         `
         catagoriesSection.appendChild(catagoryDiv)
-        console.log(catagory)
+        // console.log(catagory)
     })
 }
 loadCatagories()
@@ -62,9 +62,12 @@ const displayNews = (allNews) => {
 
                     <p><i class="fa-solid fa-eye"></i> ${news.total_view}</p>
                 </div>
+
                 <div>
-                    <button  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >show details</button>
+                    <button onclick="newsDetails('${news._id
+            }')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >show details</button>
                 </div>
+
             </div>
               
 
@@ -73,9 +76,41 @@ const displayNews = (allNews) => {
          </div>
 
         </div>
+
+
+       
+
         `
         newsContainer.appendChild(newsDiv)
-        console.log(news)
+        // console.log(news)
+    })
+};
+
+
+// news details for modal
+const newsDetails = (newsId) => {
+    fetch(`https://openapi.programming-hero.com/api/news/${newsId}`)
+        .then(res => res.json())
+        .then(data => displayModal(data.data))
+};
+const displayModal = details => {
+
+    const modalBody = document.getElementById('modal-body')
+
+    details.forEach(detail => {
+        modalBody.innerHTML = `
+        <img style="height: 45px; width: 45px; border-radius: 50%; src="${detail.author.img}"></img>
+        <p> author name: ${detail.author
+                .name ? detail.author
+                .name : 'No name found'}</p>
+        <p> total view: ${detail.total_view
+                ? detail.total_view : 'No viewed yet'}</p>
+
+        
+        `
+        console.log(detail)
     })
 }
-newsLoad(5);
+newsDetails()
+
+// newsLoad();
