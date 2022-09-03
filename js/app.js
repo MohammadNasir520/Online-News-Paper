@@ -35,12 +35,13 @@ const toggleSpinner = (isLoading) => {
 const newsLoad = (id) => {
     fetch(`https://openapi.programming-hero.com/api/news/category/${id}`)
         .then(res => res.json())
-        .then(data => displayNews(data.data))
+        .then(data => displayNews(data))
 
 };
 
 
-const displayNews = (allNews) => {
+const displayNews = (newsData) => {
+    const allNews = newsData.data
     const WarningContainer = document.getElementById('warning-container')
     const spinnerConteiner = document.getElementById('spinner-container');
     if (allNews.length === 0) {
@@ -152,6 +153,6 @@ const displayModal = details => {
         console.log(detail)
     })
 }
-newsDetails()
+// newsDetails()
 
-newsLoad();
+// newsLoad();
