@@ -41,9 +41,14 @@ const newsLoad = (id) => {
 
 
 const displayNews = (allNews) => {
-
+    const WarningContainer = document.getElementById('warning-container')
+    const spinnerConteiner = document.getElementById('spinner-container');
     if (allNews.length === 0) {
-
+        WarningContainer.classList.remove('d-none')
+        spinnerConteiner.classList.add('d-none')
+    }
+    else {
+        WarningContainer.classList.add('d-none')
     }
 
     const newsContainer = document.getElementById('news-container');
