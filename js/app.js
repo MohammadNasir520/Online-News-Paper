@@ -105,6 +105,10 @@ const displayModal = details => {
                 .name : 'No name found'}</p>
         <p> total view: ${detail.total_view
                 ? detail.total_view : 'No viewed yet'}</p>
+        <p> Rating: ${detail.rating.number
+
+                ? detail.rating.number
+                : 'No rating yet'}</p>
 
         
         `
