@@ -167,4 +167,4 @@ const displayModal = details => {
 }
 // newsDetails()
 
-// newsLoad();
+newsLoad('08');
