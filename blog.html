@@ -45,66 +45,129 @@
         <!------------- var let const start-------------------- -->
         <section>
             <div class="border border-primary  my-4 p-4">
-                <h4 class="text-center">1.difference between var,let and const</h4>
                 <div>
-                    <p><span class="fw-bold fs-4">var</span>
+                    <h4 class="text-center">1.difference between var,let and const</h4>
+                    <div>
+                        <p><span class="fw-bold fs-4">var</span>
+                            <br>
+                            What is the VAR Variable in JS?
+                            <br>
+                            Var variable is the old way to declare a variable in javascript; var variable has the
+                            function
+                            scope, But global scope when it is declared outside the function.
+                            <br>
+                            scope of var variable
+                            <br>
+                            When we declare a var variable outside the function, it will have the global scope and will
+                            be
+                            available to use everywhere inside the whole program.
+                        </p>
+                    </div>
+                    <div>
+
+                        <p> <span class="fw-bold fs-4">Let</span>
+                            <br>
+                            What is the Let Variable in JS?
+                            <br>
+
+                            Let variable introduce a special feature that does not allow
+                            re-declaration of
+                            variables, if you
+                            remember, re-declaration was a problem in var variable but let variable solve this problem.
+                            <br>
+                            scope of let variable
+                            <br>
+                            The let variable have block scope, meaning let variable will be accessible only inside the
+                            block
+                            it's
+                            declared if we try of access outside of the scope it will show Reference Error.
+                        </p>
+                    </div>
+                    <div>
+                        <p> <span class="fw-bold fs-4">Const</span>
+                            <br>
+                            What is the Const variable in JS?
+                            <br>
+
+                            The new version of javascript (ES6) introduces two new methods of declaring variables in
+                            javascript,
+                            one was using the const keyword to declare constant variables.
+                            <br>
+                            <br>
+                            const declarations are block-scoped
+                            <br>
+                            Const variable also has the Block scope like let variable, const variable also can't be
+                            accessed
+                            outside of the scope.
+
+
+
+                        </p>
+                    </div>
+
+                </div>
+                <!------------- var let const end-------------------- -->
+
+                <!--Difference between arrow function and regular function start  -->
+                <div class="my-4">
+                    <h4 class="text-center">2.Difference between arrow function and regular function</h4>
+                    <p>Syntax
                         <br>
-                        What is the VAR Variable in JS?
+                        The first and most obvious difference between arrow functions and regular functions is their
+                        syntax. Not only do they look different, but arrow functions also provide an implicit return
+                        shorthand and allow parenthesis around a single argument to be omitted.
                         <br>
-                        Var variable is the old way to declare a variable in javascript; var variable has the function
-                        scope, But global scope when it is declared outside the function.
                         <br>
-                        scope of var variable
+                        Execution context
                         <br>
-                        When we declare a var variable outside the function, it will have the global scope and will be
-                        available to use everywhere inside the whole program.
+                        Inside a regular function, execution context (i.e. the value of this) is dynamic. This means
+                        that the value of this depends on how the function was invoked (simple invocation, method
+                        invocation, indirect invocation or constructor invocation). On the other hand, an arrow function
+                        does not define its own execution context. This results in an arrow function's this being
+                        resolved lexically (i.e. the scope in which the arrow function was defined).
+                        <br>
+                        <br>
+                        Constructors
+                        <br>
+                        Regular functions can be used as constructors, using the new keyword. Yet another consequence of
+                        the lexical resolution of this inside arrow functions is that they cannot be used as
+                        constructors. Using new with an arrow function results in a TypeError.
                     </p>
                 </div>
+                <!--Difference between arrow function and regular function end  -->
                 <div>
+                    <h4 class="text-center">3.difference between map,forEach,filter, find</h4>
+                    <p>
+                        map
+                        <br>
+                        map works like for of loop and return value automitacali.
 
-                    <p> <span class="fw-bold fs-4">Let</span>
-                        <br>
-                        What is the Let Variable in JS?
-                        <br>
-
-                        Let variable introduce a special feature that does not allow
-                        re-declaration of
-                        variables, if you
-                        remember, re-declaration was a problem in var variable but let variable solve this problem.
-                        <br>
-                        scope of let variable
-                        <br>
-                        The let variable have block scope, meaning let variable will be accessible only inside the block
-                        it's
-                        declared if we try of access outside of the scope it will show Reference Error.
-                    </p>
-                </div>
-                <div>
-                    <p> <span class="fw-bold fs-4">Const</span>
-                        <br>
-                        What is the Const variable in JS?
-                        <br>
-
-                        The new version of javascript (ES6) introduces two new methods of declaring variables in
-                        javascript,
-                        one was using the const keyword to declare constant variables.
                         <br>
                         <br>
-                        const declarations are block-scoped
+                        forEach
                         <br>
-                        Const variable also has the Block scope like let variable, const variable also can't be accessed
-                        outside of the scope.
-
-
-
+                        forEach also works like for of loop but forEach does nor return anything.
+                        <br>
+                        <br>
+                        filter
+                        <br>
+                        The filter() method creates a new array filled with elements that pass a test provided by a
+                        function.
+                        <br>
+                        <br>
+                        find
+                        <br>
+                        The find() method returns the value of the first element that passes a test. The find() method
+                        executes a function for each array element. The find() method returns undefined if no elements
+                        are found. The find() method does not execute the function for empty elements.
                     </p>
                 </div>
             </div>
         </section>
-        <!------------- var let const end-------------------- -->
-        <section>
 
-        </section>
+
+
+
     </main>
 
 
