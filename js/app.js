@@ -3,6 +3,7 @@ const loadCatagories = () => {
         .then(res => res.json())
         .then(data => displayCatagories(data.data.news_category
         ))
+        .catch(error => { alert(error) })
 };
 const displayCatagories = (catagories) => {
     const catagoriesSection = document.getElementById('catagories-section');
@@ -36,7 +37,7 @@ const newsLoad = (id) => {
     fetch(`https://openapi.programming-hero.com/api/news/category/${id}`)
         .then(res => res.json())
         .then(data => displayNews(data.data))
-
+        .catch(error => { alert(error) })
 };
 
 
